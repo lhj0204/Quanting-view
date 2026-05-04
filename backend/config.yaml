@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  host: "localhost"
+
+database:
+  driver: "sqlite"
+  dsn: "data/quant.db"
+
+proxy:
+  url: "http://127.0.0.1:7890"  # HTTP/SOCKS5 proxy URL, e.g. "http://127.0.0.1:7890" or "socks5://127.0.0.1:1080"
+
+exchange:
+  binance:
+    testnet: false
+    ws_url: "wss://stream.binance.com:9443/ws"
+    rest_url: "https://api.binance.com"
+  okx:
+    testnet: false
+    ws_url: "wss://ws.okx.com:8443/ws/v5/public"
+    rest_url: "https://www.okx.com"
+
+paper_trading:
+  initial_balance: 10000.0
+  currency: "USDT"
+
+risk:
+  default_max_position_pct: 20.0
+  default_stop_loss_pct: 10.0
+  default_take_profit_pct: 20.0
+  default_max_drawdown_pct: 30.0
